@@ -13,4 +13,4 @@ kubectl config get-contexts
 
 ## Excuting a Pod 
 
-Create a YAML file for the desired pod [Example](
+Create a YAML file for the desired pod [Example](docs/coverm.yaml)
