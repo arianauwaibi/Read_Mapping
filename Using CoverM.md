@@ -60,8 +60,48 @@ coverm contig -1 Sample_134807_R1_trim.fastq.gz -2 Sample_134807_R2_trim.fastq.g
 
 **5. --mapper *default: minimap2-sr**
 
+```
+--minimapper2-
+```
+
 **6. Alignment Thresholding**
 
-**7.  --methods *default: mean**
+**7. --methods *default: mean**
 
 **8.  --output (file)**
+
+## Samples
+
+
+coverm 
+
+contig 
+
+--contig-end-exclusion <contig-end-exclusion> 
+  
+--mapper <mapper>
+  
+--methods <methods>...
+  
+--min-covered-fraction <min-covered-fraction> 
+  
+--output-format <output-format> 
+  
+  -1 <read1>...
+  
+  -2 <read2>... 
+  
+--reference <reference>... 
+  
+    --minimap2-reference-is-index 
+  
+--threads <threads> 
+  
+--trim-max <trim-max>
+  
+--trim-min <trim-min>  
+
+  
+
+--minimap2-reference-is-index  
+  
