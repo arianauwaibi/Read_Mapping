@@ -105,3 +105,21 @@ contig
 
 --minimap2-reference-is-index  
   
+
+  
+  **Example**
+  
+  coverm contig --contig-end-exclusion <contig-end-exclusion> --coupled <coupled>... --interleaved <interleaved>... --mapper <mapper> --methods <methods>... --min-covered-fraction <min-covered-fraction> --min-read-aligned-percent-pair <min-read-aligned-percent-pair> --minimap2-reference-is-index --output-file <output-file> --output-format <output-format> --proper-pairs-only -1 <read1>... -2 <read2>... --reference <reference>... --single <single>... --threads <threads> --trim-max <trim-max> --trim-min <trim-min>
+  
+**Test 1**
+```
+coverm contig -c read1.fastq read2.fastq -r BS13-02.fna --minimap2-reference-is-index --mapper --methods --min-read-aligned-percent-pair 95 --output-file results --output-format --proper-pairs-only
+```
+  
+The results of this code did not provide error but it did cause  
+ - Warning: coverm] Minimap2 uses mapping parameters defined when the index was created, not parameters defined when mapping. Proceeding on the assumption that you passed the correct parameters when creating the minimap2 index.
+  
+When you wait for 10 mins results popup. Only one read was actually mapped. 
+  
+  
+  
