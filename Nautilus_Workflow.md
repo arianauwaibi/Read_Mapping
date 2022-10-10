@@ -48,7 +48,7 @@ jupyter notebook --ip='0.0.0.0'
 I often use the third link and put it in browser's address bar. 
 
 
-**Once you are done with the pod it was be delted**
+**Once you are done with the pod it was be deleted**
 
 ```
 kubectl delete pod coverm
