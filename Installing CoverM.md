@@ -1,6 +1,6 @@
-# Installing and Using CoverM in Nautilus 
+# Installing CoverM in Nautilus 
 
-## Installing CoverM
+## [Installing CoverM](https://github.com/wwood/CoverM)
 >*CoverM can only be used in Linux*
 
 ```
