@@ -117,9 +117,27 @@ coverm contig -c read1.fastq read2.fastq -r BS13-02.fna --minimap2-reference-is-
 ```
   
 The results of this code did not provide error but it did cause  
- - Warning: coverm] Minimap2 uses mapping parameters defined when the index was created, not parameters defined when mapping. Proceeding on the assumption that you passed the correct parameters when creating the minimap2 index.
+ - Warning: coverm Minimap2 uses mapping parameters defined when the index was created, not parameters defined when mapping. Proceeding on the assumption that you passed the correct parameters when creating the minimap2 index.
   
 When you wait for 10 mins results popup. Only one read was actually mapped. 
   
   
+**Question**
   
+ HOW TO CREATE A MINIMAP2 INDEX??
+  
+  
+** TEST 2**
+  
+How to show the length of the contig in the sample
+  
+```
+  coverm contig --single BS13-02.fna -r BS13-02.fna --methods length --output-file lengths_read1_BS13-02.fna_strain
+ ```
+This provided a chart of the number of scaffolds in the file and the length (bp) of each scaffolds 
+  
+*Contig	BS13-02.fna/BS13-02.fna Length*
+  
+*JAADAE010000001.1 -> 85323*
+  
+coverm contig --single read1.fastq -r read1.fastq --methods length --output-file lengths_read1
