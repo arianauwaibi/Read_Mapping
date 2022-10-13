@@ -125,9 +125,17 @@ When you wait for 10 mins results popup. Only one read was actually mapped.
 **Question**
   
  HOW TO CREATE A MINIMAP2 INDEX??
+ 
+  an attempt at creating a index
   
+```
+coverm contig -1 read1.fastq -2 read2.fastq -r strains.mmi --minimap2-reference-is-index --mapper --methods --min-read-aligned-percent-pair 95 --output-file results --output-format --proper-pairs-only
+```
+*Results from this code* : Reoccuring error message
   
-** TEST 2**
+ [2022-10-12T21:55:48Z WARN  coverm::filter] Found a mapping record marked as being a proper pair, but mtid != tid, indicating it was an improper pair. Record was Record(tid: 236, pos: 39)
+ 
+**Test 2**
   
 How to show the length of the contig in the sample
   
