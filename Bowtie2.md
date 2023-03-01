@@ -23,9 +23,19 @@ test.rev.2.bt2.tmp to test.rev.2.bt2
 
 ### Set the parameters for aligning sample reads
 
+bowtie2 [options] -x <bt2-idx> {-1 <m1> -2 <m2> | -U <r> | --interleaved <i> | --sra-acc <acc> | b <bam>} -S [<sam>]
+  
+
 Example: 
 
-bowtie2 **--very-fast-local** **-x** /Users/arianauwaibi/bowtie2_index/test **-1** /Users/arianauwaibi/bowtie2_index/Sample_134807_R1_trim.fastq **-2** /Users/arianauwaibi/bowtie2_index/Sample_134807_R2_trim.fastq **-S** /Users/arianauwaibi/bowtie2_index/test.sam
+```bowtie2 --very-fast-local -x /Users/arianauwaibi/bowtie2_index/test -1 /Users/arianauwaibi/bowtie2_index/Sample_134807_R1_trim.fastq **-2** /Users/arianauwaibi/bowtie2_index/Sample_134807_R2_trim.fastq **-S** /Users/arianauwaibi/bowtie2_index/test.sam```
+  
+2. `samtools view -S -b /Users/arianauwaibi/bowtie2_index/test.sam > /Users/arianauwaibi/bowtie2_index/test.bam`
+
+3. `samtools sort test.bam -o test.sorted.bam`
+  
+4. `samtools index /Users/arianauwaibi/bowtie2_index/test.sorted.bam /Users/arianauwaibi/bowtie2_index/test.sorted.bam.bai`
+
 
 **Parts of the code**
 1. End to End alignment or Local Alignment * *default setting* *
@@ -33,7 +43,7 @@ bowtie2 **--very-fast-local** **-x** /Users/arianauwaibi/bowtie2_index/test **-1
 -Local: some of the characters at the ends of the read do not participate. In this case, 4 characters are omitted (or "soft trimmed" or "soft clipped") from the beginning and 3 characters are omitted from the end. This sort of alignment can be produced by Bowtie 2 only in local mode.
 
 
-** End to End Alignment**
+
 
 ## Alignment Score
 An alignment score quantifies how similar the read sequence is to the reference sequence aligned to. The higher the score, the more similar they are. A score is calculated by subtracting penalties for each difference (mismatch, gap, etc.) and, in local alignment mode, adding bonuses for each match.
@@ -51,6 +61,6 @@ The scores can be configured with the
 --rfg (affine reference gap penalty) options.
 
 
-#### End to End
+#### End to End Alignment
 
-#### Local
+#### Local Alignment 
