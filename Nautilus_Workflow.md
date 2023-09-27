@@ -25,7 +25,7 @@ Verify the status of the pod
 kubectl get pods
 ```
 
-Oncce the pod is create it should say Running
+Once the pod is create it should say Running
 
 Then input 
 ```
