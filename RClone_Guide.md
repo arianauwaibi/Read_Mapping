@@ -28,3 +28,4 @@ The path from the host computer (iMac) copied to the rclone remote
 ```
 rclone copy ceph:sequences /home/jovyan/sequences
 ```
+`/home/jovyan/` is the Nautilus pod home directory
