@@ -3,7 +3,7 @@ Guides on how to use read mapping softwares include to complete my dissertation 
 
 ## Software Guides: 
 
-1. CoverM
-2. BWA
+1. Humana (biobakery)
+2. Rclone
 3. Nautilus 
 4. MetaPhlAn 4
